@@ -1,0 +1,15 @@
+contexts:
+  default:
+    defaultIde: none
+    defaultProvider: docker
+    providers:
+      docker:
+        creationTimestamp: "2025-04-30T13:52:38Z"
+        initialized: true
+        options:
+          DOCKER_BUILDER: {}
+          DOCKER_HOST: {}
+          DOCKER_PATH:
+            value: docker
+          INACTIVITY_TIMEOUT: {}
+defaultContext: default
