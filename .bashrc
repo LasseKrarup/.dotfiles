@@ -151,6 +151,12 @@ complete -o bashdefault -o default -F _gitlab-ci-local_yargs_completions gitlab-
 ###-end-gitlab-ci-local-completions-###
 
 export EDITOR=nvim
-
-eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/atomic.omp.json)"
+eval "$(starship init bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env)"
+fi
