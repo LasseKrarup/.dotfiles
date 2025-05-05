@@ -22,5 +22,5 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-# Devpod install script
-^install\.sh
+# Install scripts
+^install.+\.sh
