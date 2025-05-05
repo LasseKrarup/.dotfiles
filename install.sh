@@ -3,7 +3,15 @@
 if [ ! command -v foobar ] &>/dev/null; then
   # Install Stow
   echo "Stow not found. Attempting to install..."
-  sudo apt-get install stow
+
+  # Check if sudo is available
+  if command -v sudo &>/dev/null; then
+    SUDO="sudo"
+  else
+    SUDO=""
+  fi
+
+  $SUDO apt-get install stow
 fi
 
 if [ -f ~/.bashrc ]; then
