@@ -1,0 +1,2 @@
+# Ignore nushell history
+.config/nushell/history.txt
