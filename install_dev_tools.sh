@@ -30,7 +30,10 @@ fi
 mkdir -p ~/.local/bin
 
 # Symlink fd-find to fd
-ln -s /usr/bin/fdfind ~/.local/bin/fd
+if [ ! -f ~/.local/bin/fd ]; then
+  echo "Creating symlink for fd-find..."
+  ln -s /usr/bin/fd-find ~/.local/bin/fd
+fi
 
 # Install Starship
 if ! command -v starship &>/dev/null; then
@@ -61,3 +64,7 @@ if ! command -v lazygit &>/dev/null; then
   install lazygit -D -t $HOME/.local/bin
   rm lazygit -r
 fi
+
+# ── KEEP AT THE END OF SCRIPT ─────────────────────────────────────────
+# Source .bashrc
+. $HOME/.bashrc
