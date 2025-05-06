@@ -12,6 +12,13 @@ return {
             "--enable-config",
           },
         },
+        neocmake = {
+          init_options = {
+            lint = {
+              enable = false,
+            },
+          },
+        },
       },
     },
   },
