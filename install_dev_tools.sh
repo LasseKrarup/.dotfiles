@@ -47,7 +47,7 @@ fi
 if ! command -v node &>/dev/null; then
   echo "Installing Node.js using fnm..."
   curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir "$HOME/.local/bin" --skip-shell
-  eval "$(fnm env)"
+  eval "$($HOME/.local/bin/fnm env)"
   fnm install 22
 fi
 
@@ -68,4 +68,4 @@ fi
 
 # ── KEEP AT THE END OF SCRIPT ─────────────────────────────────────────
 # Source .bashrc
-. $HOME/.bashrc
+source ~/.bashrc
