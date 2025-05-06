@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define packages to install
-PACKAGES="git curl wget htop ripgrep fzf fd-find unzip"
+PACKAGES="git curl wget htop ripgrep fzf fd-find unzip tmux"
 
 # Check if sudo is available
 if command -v sudo &>/dev/null; then
