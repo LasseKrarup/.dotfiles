@@ -13,9 +13,10 @@ fi
 echo "Installing apt packages: $PACKAGES"
 
 # Install packages
-$SUDO apt-get update
+if [ ! -d /var/lib/apt/lists ] || [ -z "$(ls -A /var/lib/apt/lists 2>/dev/null)" ]; then
+  $SUDO apt-get update
+fi
 $SUDO apt-get install -y --no-install-recommends $PACKAGES
-$SUDO rm -rf /var/lib/apt/lists/*
 
 APT_EXIT=$?
 
@@ -29,10 +30,10 @@ fi
 # Ensure ~/.local/bin exists
 mkdir -p ~/.local/bin
 
-# Symlink fd-find to fd
+# Symlink fdfind to fd
 if [ ! -f ~/.local/bin/fd ]; then
-  echo "Creating symlink for fd-find..."
-  ln -s /usr/bin/fd-find ~/.local/bin/fd
+  echo "Creating symlink for fdfind..."
+  ln -s /usr/bin/fdfind ~/.local/bin/fd
 fi
 
 # Install Starship
