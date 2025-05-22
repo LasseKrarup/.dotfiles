@@ -19,6 +19,11 @@ return {
             },
           },
         },
+        nil_ls = {
+          formatting = {
+            command = { "nixfmt" },
+          },
+        },
       },
     },
   },
