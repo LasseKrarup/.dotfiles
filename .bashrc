@@ -152,7 +152,6 @@ complete -o bashdefault -o default -F _gitlab-ci-local_yargs_completions gitlab-
 
 export EDITOR=nvim
 eval "$(starship init bash)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # fnm
 FNM_PATH="$HOME/.local/bin"
