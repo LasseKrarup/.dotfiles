@@ -1,2 +1,6 @@
 # Ignore nushell history
 .config/nushell/history.txt
+
+# Ignore some fish things
+.config/fish/*
+!.config/fish/config.fish
