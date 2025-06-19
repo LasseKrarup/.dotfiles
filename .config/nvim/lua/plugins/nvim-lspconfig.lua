@@ -24,6 +24,7 @@ return {
             command = { "nixfmt" },
           },
         },
+        html = {},
       },
     },
   },
