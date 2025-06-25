@@ -7,7 +7,7 @@ return {
         clangd = {
           cmd = {
             "clangd",
-            "--query-driver=**/xtensa-esp32-elf-gcc,**/xtensa-esp32-elf-g++",
+            "--query-driver=**",
             "--clang-tidy",
             "--enable-config",
           },
