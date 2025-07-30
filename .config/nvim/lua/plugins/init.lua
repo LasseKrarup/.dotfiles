@@ -5,7 +5,7 @@ return {
   { "echasnovski/mini.ai", opts = {} },
   { "lewis6991/gitsigns.nvim", opts = {} },
 
-  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+  { "ellisonleao/gruvbox.nvim", opts = {} },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -104,4 +104,15 @@ return {
     opts = { signs = false },
   },
   -- ──────────────────────────────────────────────────────────────────────
+  {
+    "chomosuke/typst-preview.nvim",
+    ft = "typst",
+    version = "1.*",
+    opts = {
+      dependencies_bin = {
+        ["tinymist"] = "tinymist",
+        ["websocat"] = nil,
+      },
+    }, -- lazy.nvim will implicitly calls `setup {}`
+  },
 }

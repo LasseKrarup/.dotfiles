@@ -4,6 +4,11 @@ vim.lsp.config("clangd", {
     "--query-driver=**",
     "--clang-tidy",
     "--enable-config",
+    "--background-index",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--function-arg-placeholders",
+    "--fallback-style=llvm",
   },
 })
 

@@ -31,8 +31,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename symbol" })
 
-    vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action,
-      { buffer = ev.buf, desc = "Code actions" })
+    vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = ev.buf, desc = "Code actions" })
   end,
 })
 
@@ -59,7 +58,7 @@ capabilities.textDocument.completion.completionItem = {
 vim.diagnostic.config {
   severity_sort = true,
   float = { border = "rounded", source = "if_many" },
-  underline = { severity = vim.diagnostic.severity.ERROR },
+  underline = true,
   signs = vim.g.have_nerd_font and {
     text = {
       [vim.diagnostic.severity.ERROR] = "󰅚 ",
@@ -87,10 +86,11 @@ vim.lsp.config("*", { capabilities = capabilities })
 
 -- ── Advanced servers requiring extra config ─────────────────────────
 require "plugins.configs.lspconfig.clangd"
+require "plugins.configs.lspconfig.tinymist"
 -- ──────────────────────────────────────────────────────────────────────
 
 -- ── Simple servers with no config ───────────────────────────────────
-local servers = { "html", "cssls", "lua_ls" }
+local servers = { "html", "cssls", "lua_ls", "nixd" }
 -- ──────────────────────────────────────────────────────────────────────
 
 vim.lsp.enable(servers)
