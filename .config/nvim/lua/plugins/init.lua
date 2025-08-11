@@ -3,6 +3,7 @@ return {
   { "echasnovski/mini.statusline", opts = {} },
   { "echasnovski/mini.move", opts = require "plugins.configs.mini.move" },
   { "echasnovski/mini.ai", opts = {} },
+  { "echasnovski/mini.surround", opts = require "plugins.configs.mini.surround" },
   { "lewis6991/gitsigns.nvim", opts = {} },
 
   { "ellisonleao/gruvbox.nvim", opts = {} },
@@ -113,6 +114,17 @@ return {
         ["tinymist"] = "tinymist",
         ["websocat"] = nil,
       },
+      extra_args = { "--font-path", "fonts" },
     }, -- lazy.nvim will implicitly calls `setup {}`
+  },
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    lazy = false,
   },
 }

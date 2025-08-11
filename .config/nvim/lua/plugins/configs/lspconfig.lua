@@ -90,7 +90,7 @@ require "plugins.configs.lspconfig.tinymist"
 -- ──────────────────────────────────────────────────────────────────────
 
 -- ── Simple servers with no config ───────────────────────────────────
-local servers = { "html", "cssls", "lua_ls", "nixd" }
+local servers = { "html", "cssls", "lua_ls", "nixd", "csharp_ls" }
 -- ──────────────────────────────────────────────────────────────────────
 
 vim.lsp.enable(servers)

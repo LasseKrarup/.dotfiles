@@ -23,3 +23,16 @@ end, { desc = "Format buffer" })
 
 -- Clear highlights
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- ── COPY LINE DOWN/UP ───────────────────────────────────────────────
+vim.keymap.set("n", "<S-M-j>", "yyp", { desc = "Copy line down" })
+vim.keymap.set("n", "<S-M-k>", "yyP", { desc = "Copy line up" })
+-- ──────────────────────────────────────────────────────────────────────
+
+-- ── TypstPreview ────────────────────────────────────────────────────
+vim.keymap.set("n", "<leader>tp", "<cmd>TypstPreview<CR>", { desc = "Open Typst Preview" })
+-- ──────────────────────────────────────────────────────────────────────
+
+-- ── Exit terminal mode ──────────────────────────────────────────────
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+-- ──────────────────────────────────────────────────────────────────────

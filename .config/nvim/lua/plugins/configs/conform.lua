@@ -3,5 +3,6 @@ return {
     lua = { "stylua" },
     javascript = { "prettier" },
     nix = { "nixfmt" },
+    typst = { "typstyle" },
   },
 }
