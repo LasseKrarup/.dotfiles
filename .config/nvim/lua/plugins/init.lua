@@ -127,4 +127,19 @@ return {
     -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
     lazy = false,
   },
+  {
+    "gbprod/yanky.nvim",
+    opts = {},
+    dependencies = { "folke/snacks.nvim" },
+    keys = {
+      {
+        "<leader>p",
+        function()
+          Snacks.picker.yanky()
+        end,
+        mode = { "n", "x" },
+        desc = "Open Yank History",
+      },
+    }
+  }
 }
