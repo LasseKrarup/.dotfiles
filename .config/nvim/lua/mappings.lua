@@ -17,8 +17,8 @@ map("n", "<leader>cml", "<cmd> CBllline <CR>", { desc = "Fancy line comment" })
 map("n", "<leader>cmb", "<cmd> CBalbox <CR>", { desc = "Fancy box comment" })
 
 -- format
-map("n", "<leader>fm", function()
-  require("conform").format()
+map({ "n", "v" }, "<leader>fm", function()
+  require("conform").format({ lsp_fallback = true, })
 end, { desc = "Format buffer" })
 
 -- Clear highlights
@@ -36,3 +36,6 @@ vim.keymap.set("n", "<leader>tp", "<cmd>TypstPreview<CR>", { desc = "Open Typst 
 -- ── Exit terminal mode ──────────────────────────────────────────────
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 -- ──────────────────────────────────────────────────────────────────────
+
+-- ── GIT ─────────────────────────────────────────────────────────────
+vim.keymap.set("n", "<leader>ghp", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview Git Hunk" })
