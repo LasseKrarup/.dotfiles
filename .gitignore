@@ -4,3 +4,7 @@
 # Ignore some fish things
 .config/fish/*
 !.config/fish/config.fish
+
+# Ignore nvim spell
+**/*.spl
+**/*.utf-8.add
