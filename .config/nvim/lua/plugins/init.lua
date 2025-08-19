@@ -1,12 +1,12 @@
 return {
   { "nvim-tree/nvim-web-devicons", opts = {} },
   { "echasnovski/mini.statusline", opts = {} },
-  { "echasnovski/mini.move", opts = require "plugins.configs.mini.move" },
-  { "echasnovski/mini.ai", opts = {} },
-  { "echasnovski/mini.surround", opts = require "plugins.configs.mini.surround" },
-  { "lewis6991/gitsigns.nvim", opts = {} },
+  { "echasnovski/mini.move",       opts = require "plugins.configs.mini.move" },
+  { "echasnovski/mini.ai",         opts = {} },
+  { "echasnovski/mini.surround",   opts = require "plugins.configs.mini.surround" },
+  { "lewis6991/gitsigns.nvim",     opts = {} },
 
-  { "ellisonleao/gruvbox.nvim", opts = {} },
+  { "ellisonleao/gruvbox.nvim",    opts = {} },
 
   {
     "nvim-treesitter/nvim-treesitter",
