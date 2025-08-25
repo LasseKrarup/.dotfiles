@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 alias pandock='podman run --rm -v "$(pwd):/data" docker.io/pandoc/extra'
+alias lg='lazygit'
 
 starship init fish | source
 zoxide init fish | source
