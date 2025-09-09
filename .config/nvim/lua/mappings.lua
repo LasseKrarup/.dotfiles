@@ -13,12 +13,12 @@ map("n", "<C-q>", "<cmd> bd <CR>", { desc = "Delete buffer" })
 -- COMMENTS
 map("n", "<leader>/", "gcc", { remap = true, desc = "Comment line" })
 map("v", "<leader>/", "gc", { remap = true, desc = "Comment line" })
-map("n", "<leader>cml", "<cmd> CBllline <CR>", { desc = "Fancy line comment" })
-map("n", "<leader>cmb", "<cmd> CBalbox <CR>", { desc = "Fancy box comment" })
+map({ "n", "v" }, "<leader>cml", "<cmd> CBllline <CR>", { desc = "Fancy line comment" })
+map({ "n", "v" }, "<leader>cmb", "<cmd> CBalbox <CR>", { desc = "Fancy box comment" })
 
 -- format
 map({ "n", "v" }, "<leader>fm", function()
-  require("conform").format({ lsp_fallback = true, })
+  require("conform").format { lsp_fallback = true }
 end, { desc = "Format buffer" })
 
 -- Clear highlights
@@ -39,3 +39,7 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 
 -- ── GIT ─────────────────────────────────────────────────────────────
 vim.keymap.set("n", "<leader>ghp", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview Git Hunk" })
+vim.keymap.set({ "n", "v" }, "<leader>ghr", ":Gitsigns reset_hunk<CR>", { desc = "Reset Hunk" })
+vim.keymap.set("n", "<leader>ghb", "<cmd>Gitsigns blame<CR>", {desc = "Git Blame"})
+vim.keymap.set("n", "[h", "<cmd>Gitsigns prev_hunk<CR>", {desc = "Previous Hunk"})
+vim.keymap.set("n", "]h", "<cmd>Gitsigns next_hunk<CR>", {desc = "Next Hunk"})
