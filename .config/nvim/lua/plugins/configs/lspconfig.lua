@@ -87,10 +87,11 @@ vim.lsp.config("*", { capabilities = capabilities })
 -- ── Advanced servers requiring extra config ─────────────────────────
 require "plugins.configs.lspconfig.clangd"
 require "plugins.configs.lspconfig.tinymist"
+require "plugins.configs.lspconfig.omnisharp"
 -- ──────────────────────────────────────────────────────────────────────
 
 -- ── Simple servers with no config ───────────────────────────────────
-local servers = { "html", "cssls", "lua_ls", "nixd", "csharp_ls" }
+local servers = { "html", "cssls", "lua_ls", "nixd" }
 -- ──────────────────────────────────────────────────────────────────────
 
 vim.lsp.enable(servers)
