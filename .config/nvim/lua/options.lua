@@ -26,6 +26,9 @@ o.mouse = "a"
 
 o.number = true
 
+-- ── Line wrapping ───────────────────────────────────────────────────
+o.wrap = false
+
 o.signcolumn = "yes"
 o.splitbelow = true
 o.splitright = true
