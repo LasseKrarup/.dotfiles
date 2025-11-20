@@ -43,3 +43,6 @@ vim.keymap.set({ "n", "v" }, "<leader>ghr", ":Gitsigns reset_hunk<CR>", { desc =
 vim.keymap.set("n", "<leader>ghb", "<cmd>Gitsigns blame<CR>", {desc = "Git Blame"})
 vim.keymap.set("n", "[h", "<cmd>Gitsigns prev_hunk<CR>", {desc = "Previous Hunk"})
 vim.keymap.set("n", "]h", "<cmd>Gitsigns next_hunk<CR>", {desc = "Next Hunk"})
+
+-- ── CODE ────────────────────────────────────────────────────────────
+vim.keymap.set("n", "<leader>cb", "<cmd>!nix build<CR>", { desc = "Build (nix build)" })

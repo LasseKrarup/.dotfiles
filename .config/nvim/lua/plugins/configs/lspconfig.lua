@@ -91,7 +91,7 @@ require "plugins.configs.lspconfig.omnisharp"
 -- ──────────────────────────────────────────────────────────────────────
 
 -- ── Simple servers with no config ───────────────────────────────────
-local servers = { "html", "cssls", "lua_ls", "nixd" }
+local servers = { "html", "cssls", "lua_ls", "nixd", "pyright" }
 -- ──────────────────────────────────────────────────────────────────────
 
 vim.lsp.enable(servers)
