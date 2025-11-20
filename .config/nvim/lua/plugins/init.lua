@@ -75,6 +75,24 @@ return {
     opts = require "plugins.configs.conform",
   },
 
+  -- ── Debugging ───────────────────────────────────────────────────────
+  {
+    "sakhnik/nvim-gdb",
+    init = function()
+      -- Disable all the default start keymaps (<leader>dd, <leader>dl, etc.)
+      vim.g.nvimgdb_disable_start_keymaps = 1
+    end,
+    keys = {
+      {
+        "<leader>dd",
+        function()
+          local gdb_path = os.getenv "GDB" or "gdb"
+          vim.cmd("GdbStart " .. gdb_path .. " -q")
+        end,
+        desc = "Start GDB with quiet mode",
+      },
+    },
+  },
   -- Snacks
   require "plugins.snacks",
 
@@ -117,6 +135,8 @@ return {
       extra_args = { "--font-path", "fonts" },
     }, -- lazy.nvim will implicitly calls `setup {}`
   },
+
+-- ── File explorer and navigation ────────────────────────────────────
   {
     "stevearc/oil.nvim",
     ---@module 'oil'
@@ -127,6 +147,8 @@ return {
     -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
     lazy = false,
   },
+  require "plugins.neotree",
+
   {
     "gbprod/yanky.nvim",
     opts = {},
@@ -142,4 +164,7 @@ return {
       },
     },
   },
+
+  -- ── Code Assistant ──────────────────────────────────────────────────
+  {"github/copilot.vim"},
 }
