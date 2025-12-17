@@ -13,10 +13,10 @@ return {
       desc = "Explorer NeoTree (Root Dir)",
       remap = true,
     },
-    -- { "<leader>E", desc = "Explorer NeoTree (cwd)", remap = true },
+    { "<leader>E", ":Neotree toggle reveal_force_cwd<cr>", desc = "Explorer NeoTree (cwd)", remap = true },
   },
   opts = {
-    close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
+    close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
     popup_border_style = "NC", -- or "" to use 'winborder' on Neovim v0.11+
     clipboard = {
       sync = "none", -- or "global"/"universal" to share a clipboard for each/all Neovim instance(s), respectively

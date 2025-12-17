@@ -24,6 +24,12 @@ end, { desc = "Format buffer" })
 -- Clear highlights
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- ── MOVEMENT ────────────────────────────────────────────────────────
+-- "o" is operator-pending mode
+map({ "n", "v", "o" }, "H", "^", { desc = "Move to beginning of line" })
+map({ "n", "v", "o" }, "L", "$", { desc = "Move to end of line" })
+-- ──────────────────────────────────────────────────────────────────────
+
 -- ── COPY LINE DOWN/UP ───────────────────────────────────────────────
 vim.keymap.set("n", "<S-M-j>", "yyp", { desc = "Copy line down" })
 vim.keymap.set("n", "<S-M-k>", "yyP", { desc = "Copy line up" })
@@ -40,9 +46,9 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 -- ── GIT ─────────────────────────────────────────────────────────────
 vim.keymap.set("n", "<leader>ghp", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview Git Hunk" })
 vim.keymap.set({ "n", "v" }, "<leader>ghr", ":Gitsigns reset_hunk<CR>", { desc = "Reset Hunk" })
-vim.keymap.set("n", "<leader>ghb", "<cmd>Gitsigns blame<CR>", {desc = "Git Blame"})
-vim.keymap.set("n", "[h", "<cmd>Gitsigns prev_hunk<CR>", {desc = "Previous Hunk"})
-vim.keymap.set("n", "]h", "<cmd>Gitsigns next_hunk<CR>", {desc = "Next Hunk"})
+vim.keymap.set("n", "<leader>ghb", "<cmd>Gitsigns blame<CR>", { desc = "Git Blame" })
+vim.keymap.set("n", "[h", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Previous Hunk" })
+vim.keymap.set("n", "]h", "<cmd>Gitsigns next_hunk<CR>", { desc = "Next Hunk" })
 
 -- ── CODE ────────────────────────────────────────────────────────────
 vim.keymap.set("n", "<leader>cb", "<cmd>!nix build<CR>", { desc = "Build (nix build)" })

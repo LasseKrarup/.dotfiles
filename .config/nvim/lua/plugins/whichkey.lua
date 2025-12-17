@@ -17,6 +17,8 @@ return {
         { "<leader>f", group = "Find..." },
         { "<leader>g", group = "Git" },
         { "<leader>gh", group = "[G]it [H]unks" },
+        { "<leader>i", group = "Iron REPL..." },
+        { "<leader>is", group = "Send to REPL..." },
         { "<leader>q", group = "Quit/session" },
         { "<leader>s", group = "Search..." },
         { "<leader>t", group = "Typst..." },

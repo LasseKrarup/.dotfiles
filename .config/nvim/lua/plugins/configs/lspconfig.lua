@@ -88,6 +88,7 @@ vim.lsp.config("*", { capabilities = capabilities })
 require "plugins.configs.lspconfig.clangd"
 require "plugins.configs.lspconfig.tinymist"
 require "plugins.configs.lspconfig.omnisharp"
+require "plugins.configs.lspconfig.vue"
 -- ──────────────────────────────────────────────────────────────────────
 
 -- ── Simple servers with no config ───────────────────────────────────

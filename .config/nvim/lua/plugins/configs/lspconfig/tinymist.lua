@@ -23,7 +23,7 @@ vim.lsp.config("tinymist", {
     end, { desc = "[T]iny[m]ist [U]npin", noremap = true })
   end,
   settings = {
-    exportPdf = "onSave",
+    exportPdf = "never",
     fontPaths = { "fonts" }, -- relative to root directory of LSP
   },
 })

@@ -136,7 +136,7 @@ return {
     }, -- lazy.nvim will implicitly calls `setup {}`
   },
 
--- ── File explorer and navigation ────────────────────────────────────
+  -- ── File explorer and navigation ────────────────────────────────────
   {
     "stevearc/oil.nvim",
     ---@module 'oil'
@@ -166,5 +166,8 @@ return {
   },
 
   -- ── Code Assistant ──────────────────────────────────────────────────
-  {"github/copilot.vim"},
+  { "github/copilot.vim" },
+
+  -- ── REPL ────────────────────────────────────────────────────────────
+  require "plugins.iron",
 }
