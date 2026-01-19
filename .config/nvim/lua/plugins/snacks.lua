@@ -6,7 +6,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
-    -- explorer = { enabled = false },
+    explorer = { enabled = false },
     indent = { enabled = true },
     input = { enabled = true },
     notifier = {
@@ -33,6 +33,20 @@ return {
         Snacks.picker.smart()
       end,
       desc = "Smart Find Files",
+    },
+    {
+      "<leader>e",
+      function()
+        Snacks.explorer()
+      end,
+      desc = "File Explorer",
+    },
+    {
+      "<leader>E",
+      function()
+        Snacks.explorer.reveal()
+      end,
+      desc = "File Explorer",
     },
     {
       "<leader>,",

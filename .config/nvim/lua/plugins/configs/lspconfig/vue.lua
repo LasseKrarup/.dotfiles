@@ -1,12 +1,10 @@
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "vue" },
   callback = function()
-    local root_path = vim.fs.root(0, "node_modules")
-    local vue_language_server_path = vim.fs.joinpath(root_path, "/@vue/language-server")
     local tsserver_filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" }
     local vue_plugin = {
       name = "@vue/typescript-plugin",
-      location = vue_language_server_path,
+      location = "",
       languages = { "vue" },
       configNamespace = "typescript",
     }
@@ -28,5 +26,4 @@ vim.api.nvim_create_autocmd("FileType", {
 
     vim.lsp.enable { "ts_ls", "vue_ls" }
   end,
-  once = true,
 })
