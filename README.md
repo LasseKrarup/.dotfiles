@@ -1,0 +1,3 @@
+# Project migrated to GitLab
+
+See [https://gitlab.com/LasseKrarup/dotfiles](https://gitlab.com/LasseKrarup/dotfiles)...
